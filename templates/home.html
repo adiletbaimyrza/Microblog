@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Adilet's Notes</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="static/css/styles.css">
+        <script src="static/js/script.js"></script>
     </head>
 
     <body>
         <header class="navbar">
             <div class="navbar__brand">
-                <img class="navbar__logo" src="logo.svg" alt="Microblog Logo">Adilet's Notes
+                <img class="navbar__logo" src="static/logo.svg" alt="Microblog Logo">Adilet's Notes
             </div>
             <ul class="navbar__navigation">
                 <li class="navbar__navigation-item"><a class="navbar__link" href="#">Recent</a></li>
@@ -22,8 +22,8 @@
         <main class="main">
             <section>
                 <h1>Add new entry</h1>
-                <form action="/entry" method="post">
-                    <p class="form">
+                <form class="form" method="post">
+                    <p class="form__input">
                         <textarea name="content" id="entry" class="form__textarea" oninput="resizeTextarea()"aria-label="entry contents" placeholder="Share Something..."></textarea>
                         <button class="form__submit" type="submit">Add Entry</button>
                     </p>
