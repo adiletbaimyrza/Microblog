@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adilet's Notes</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar__brand">
+                <img class="navbar__logo" src="logo.svg" alt="Microblog Logo">Adilet's Notes
+            </div>
+            <ul class="navbar__navigation">
+                <li class="navbar__navigation-item"><a class="navbar__link" href="#">Recent</a></li>
+                <li class="navbar__navigation-item"><a class="navbar__link" href="#">Calendar</a></li>
+            </ul>
+        </header>
+
+        <main class="main">
+            <section>
+                <h1>Add new entry</h1>
+                <form action="/entry" method="post">
+                    <p class="form">
+                        <textarea name="content" id="entry" class="form__textarea" oninput="resizeTextarea()"aria-label="entry contents" placeholder="Share Something..."></textarea>
+                        <button class="form__submit" type="submit">Add Entry</button>
+                    </p>
+                    
+                </form>
+            </section>
+
+            <section>
+                <h1>Recent Posts</h1>
+                <article class="entry">
+                    <div>
+                        <h2 class="entry__title">A bit of a chill day today</h2>
+                        <time class="entry__date"  datetime="2020-05-14">∙ 14 May 2020</time>
+                        <p class="entry__content">
+                            Today was a bit of a chill day.
+                            I didn't do much. I just watched some TV and played some games.
+                            I also went for a walk in the evening.
+                        </p>
+                    </div>
+                </article>
+                <article class="entry">
+                    <div>
+                        <h2 class="entry__title">Game of Thrones</h2>
+                        <time class="entry__date" datetime="2020-05-12">∙ 12 May 2020</time>
+                        <p class="entry__content">
+                            I watched the last episode of Game of Thrones today.
+                            I'm not sure how I feel about it.
+                            I think I liked it, but I'm not sure.
+                        </p>
+                    </div>
+                </article>
+                <article class="entry">
+                    <div>
+                        <h2 class="entry__title">Finished books</h2>
+                        <time class="entry__date" datetime="2020-05-10">∙ 10 May 2020</time>
+                        <p class="entry__content">
+                            I finished reading the Harry Potter books today.
+                            I'm a bit sad that I finished them.
+                            I wish there were more books.
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <section class="left">
+                    <a class="footer__item" href="#">Made by Adilet Baimyrza</a>
+                    <a class="footer__item" href="#">Check out my other projects</a>
+                </section>
+                <section class="right">
+                    <div class="footer__column">
+                        <a class="footer__item" href="#">Recent</a>
+                        <a class="footer__item" href="#">Calendar</a>
+                    </div>
+                    <div class="footer__column">
+                        <a class="footer__item" href="#">About</a>
+                        <a class="footer__item" href="#">How this was made</a>
+                    </div>
+                </section>
+            </div>
+            
+        </footer>
+    </body>
+</html>
