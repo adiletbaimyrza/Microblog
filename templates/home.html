@@ -20,7 +20,7 @@
         </header>
 
         <main class="main">
-            <section>
+            <section id="add__entry">
                 <h1>Add new entry</h1>
                 <form class="form" method="post">
                     <p class="form__input">
@@ -33,39 +33,17 @@
 
             <section>
                 <h1>Recent Posts</h1>
+                {% for entry in entries %}
                 <article class="entry">
                     <div>
-                        <h2 class="entry__title">A bit of a chill day today</h2>
-                        <time class="entry__date"  datetime="2020-05-14">∙ 14 May 2020</time>
+                        <h2 class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
+                        <time class="entry__date" datetime="{{ entry[2] }}">∙ {{ entry[1] }}</time>
                         <p class="entry__content">
-                            Today was a bit of a chill day.
-                            I didn't do much. I just watched some TV and played some games.
-                            I also went for a walk in the evening.
+                            {{ entry[0] }}
                         </p>
                     </div>
                 </article>
-                <article class="entry">
-                    <div>
-                        <h2 class="entry__title">Game of Thrones</h2>
-                        <time class="entry__date" datetime="2020-05-12">∙ 12 May 2020</time>
-                        <p class="entry__content">
-                            I watched the last episode of Game of Thrones today.
-                            I'm not sure how I feel about it.
-                            I think I liked it, but I'm not sure.
-                        </p>
-                    </div>
-                </article>
-                <article class="entry">
-                    <div>
-                        <h2 class="entry__title">Finished books</h2>
-                        <time class="entry__date" datetime="2020-05-10">∙ 10 May 2020</time>
-                        <p class="entry__content">
-                            I finished reading the Harry Potter books today.
-                            I'm a bit sad that I finished them.
-                            I wish there were more books.
-                        </p>
-                    </div>
-                </article>
+                {% endfor %}
             </section>
         </main>
 
