@@ -17,7 +17,7 @@ def create_app():
             return redirect(url_for('home'))
 
         entries_with_date = [
-            (entry["content"], entry["date"], entry["date"]) for entry in app.db.entries.find({})
+            (entry["content"], entry["date"]) for entry in app.db.entries.find({})
         ]
 
         return render_template('home.html', entries=list(reversed(entries_with_date)))
